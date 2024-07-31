@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Descubra se você é estrangeiro!</h1>
+    <p>Digite o nome do país que você nasceu: <input type="text" name="" id="pais"><input type="button" value="verificar" onclick="verificar()"></p>
+    <div id="res"></div>
+<script>
+   function verificar(){
+    var pais = document.querySelector('input#pais').value.toUpperCase()// Converte o valor para maiúsculas
+    var pais2 = document.querySelector('input#pais').value// tem que colocar .value para pegar somente o valor colocado no input
+    var res = document.querySelector('div#res')
+    res.innerHTML = `<p>Seu país de origem é ${pais2}</p>` 
+    if(pais !== 'BRASIL'){
+        res.innerHTML += `<p>Você é estrangeiro!!</p>`
+    }else{
+        res.innerHTML += `<p>Você é Brasileiro!!</p>`
+    }
+   }
+</script>
+</body>
+</html>
