@@ -3,6 +3,7 @@ let counter = 0
 document.getElementById("subm").addEventListener("click",function add(){
     var inputNumb = document.getElementById("numb").value
     var selectss = document.getElementById("numbSect")
+    let num = document.querySelector("input#numb")
     if(inputNumb === "" || inputNumb > 100){
         alert("Adicione um número valido")
         return
@@ -18,6 +19,8 @@ document.getElementById("subm").addEventListener("click",function add(){
     selectss.add(addset)
 
     counter++
+    num.value = ""
+    num.focus()
 })
 
 document.getElementById("finn").addEventListener("click", function final(){
